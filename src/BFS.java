@@ -8,13 +8,11 @@ public class BFS
  
     private Queue<Integer> queue;
  
-    public BFS()
-    {
+    public BFS() {
         queue = new LinkedList<Integer>();
     }
  
-    public void bfs(int adjacency_matrix[][], int source)
-    {
+    public void bfs(int adjacency_matrix[][], int source) {
         int number_of_nodes = adjacency_matrix[source].length - 1;
  
         int[] visited = new int[number_of_nodes + 1];
@@ -23,15 +21,12 @@ public class BFS
         visited[source] = 1;
         queue.add(source);
  
-        while (!queue.isEmpty())
-        {
+        while (!queue.isEmpty()) {        
             element = queue.remove();
             i = element;
             System.out.print(i + "\t");
-            while (i <= number_of_nodes)
-            {
-                if (adjacency_matrix[element][i] == 1 && visited[i] == 0)
-                {
+            while (i <= number_of_nodes) {
+                if (adjacency_matrix[element][i] == 1 && visited[i] == 0) {                
                     queue.add(i);
                     visited[i] = 1;
                 }
@@ -40,13 +35,11 @@ public class BFS
         }
     }
  
-    public static void main(String... arg)
-    {
+    public static void main(String... arg) {
         int number_no_nodes, source;
         Scanner scanner = null;
  
-        try
-        {
+        try {        
             System.out.println("Enter the number of nodes in the graph");
             scanner = new Scanner(System.in);
             number_no_nodes = scanner.nextInt();
@@ -64,8 +57,7 @@ public class BFS
             BFS bfs = new BFS();
             bfs.bfs(adjacency_matrix, source);
  
-        } catch (InputMismatchException inputMismatch)
-        {
+        } catch (InputMismatchException inputMismatch) {
             System.out.println("Wrong Input Format");
         }
         scanner.close();
