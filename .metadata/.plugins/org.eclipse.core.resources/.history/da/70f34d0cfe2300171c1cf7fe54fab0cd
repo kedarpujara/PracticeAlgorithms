@@ -1,0 +1,37 @@
+import java.util.InputMismatchException;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+ 
+public class BFS {
+	
+	private Queue<Integer> queue;
+	
+	public BFS() {
+		queue = new LinkedList<Integer>();
+	}
+	
+	public void bfs(int adj_matrix[][], int source) {
+		int numNodes = adj_matrix[source].length - 1;
+		int[] visited = new int[numNodes + 1];
+		int i, element;
+		
+		visited[source] = 1;
+		queue.add(source);
+		
+		while (queue.isEmpty() == false) {
+			
+			element = queue.remove();
+			i = element;
+			System.out.println(i + "\t");
+			while (i <= numNodes) {				
+				if adjacency
+			}
+		}
+		
+				
+	}
+	
+	
+	
+}

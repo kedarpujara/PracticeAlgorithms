@@ -1,0 +1,30 @@
+package basichashmaps;
+
+import java.util.HashMap;
+import java.util.Hashtable;
+
+public class HashMapImplement {
+	
+	String[] keys = new String[]{"Kedar", "Wonje", "Danny", "Justin", "Gio"};
+	int [] values = new int[keys.length];
+	
+	Hashtable<Integer, String> hashtable = new Hashtable<Integer, String>();
+	
+	public void insertVal() {
+		
+		for(int i = 0; i < keys.length; i++) {
+			hashtable.put(i+1, keys[i]);
+		}
+	}
+	
+	public void getVal(int key) {
+		return hashtable.get(key)
+	}
+	
+	/*for(int i = 0; i < values.length; i++) {
+		
+	}*/
+	
+	
+	
+}

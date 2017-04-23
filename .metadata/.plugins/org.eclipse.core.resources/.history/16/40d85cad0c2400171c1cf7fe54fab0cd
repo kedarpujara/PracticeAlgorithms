@@ -1,0 +1,13 @@
+package basichashmaps;
+
+import java.util.HashMap;
+
+public class HashMapImplement {
+	
+	String[] keys = new String[]{"Kedar", "Wonje", "Danny", "Justin", "Gio"};
+	int [] values = new int[keys.length];
+			
+	
+	
+	
+}
